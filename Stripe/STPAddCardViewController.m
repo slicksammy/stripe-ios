@@ -382,6 +382,8 @@ typedef NS_ENUM(NSUInteger, STPPaymentCardSection) {
                       duration:0.2
                        options:UIViewAnimationOptionTransitionFlipFromRight
                     animations:^{
+                        // FIXME: pass in card brand, which needs to be avilable through the `STPPaymentCardTextField`
+                        // take a look at that class's brandImageForFieldType:validationState: method
                         self.cardImageView.image = [STPImageLibrary largeCardBackImage];
                     } completion:nil];
 }
